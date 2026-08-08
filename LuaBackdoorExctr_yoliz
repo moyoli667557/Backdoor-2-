@@ -38,7 +38,7 @@ local commonPlaces = {
 };
 local remoteCodes = {};
 
--- Constants
+-- gui
 
 local STRING_VALUE_NAME = mathRandom(1000000, 9999999);
 
