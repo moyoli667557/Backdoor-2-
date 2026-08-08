@@ -1,0 +1,199 @@
+--[[
+██████╗░░█████╗░░█████╗░██╗░░██╗██████╗░░█████╗░░█████╗░██████╗░
+██╔══██╗██╔══██╗██╔══██╗██║░██╔╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗
+██████╦╝███████║██║░░╚═╝█████═╝░██║░░██║██║░░██║██║░░██║██████╔╝
+██╔══██╗██╔══██║██║░░██╗██╔═██╗░██║░░██║██║░░██║██║░░██║██╔══██╗
+██████╦╝██║░░██║╚█████╔╝██║░╚██╗██████╔╝╚█████╔╝╚█████╔╝██║░░██║
+╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░░╚════╝░╚═╝░░╚═╝
+
+Invite Discord Server:discord.com/invite/Gnabm6WfhA
+
+source script : backdoor exe v6x (@ik4os)
+--]]
+
+local CollectionService = game:GetService("CollectionService")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local StarterGui = game:GetService("StarterGui")
+local RobloxReplicatedStorage = game:GetService("RobloxReplicatedStorage")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local JointsService = game:GetService("JointsService")
+local StarterGui = game:GetService("StarterGui")
+local TweenService = game:GetService("TweenService")
+local Lighting = game:GetService("Lighting")
+local Workspace = game:GetService("Workspace")
+local RobloxReplicatedStorage = game:GetService("RobloxReplicatedStorage")
+local dateTimeNow = DateTime.now
+local tableFind = table.find
+local taskSpawn = task.spawn
+local taskWait = task.wait
+local stringRep = string.rep
+local mathRandom = math.random
+local attached = false;
+local backdoor = nil;
+local commonPlaces = {
+	ReplicatedStorage,
+	Workspace,
+	Lighting
+};
+local remoteCodes = {};
+
+-- Constants
+
+local STRING_VALUE_NAME = mathRandom(1000000, 9999999);
+
+local LMG2L = {};
+LMG2L["ScreenGui_1"] = Instance.new("ScreenGui")
+LMG2L["ScreenGui_1"].Parent = game.CoreGui
+LMG2L["ScreenGui_1"]["Enabled"] = true;
+LMG2L["ScreenGui_1"]["DisplayOrder"] = 9999999999999999999999999999999999999999999999999999999999999999;
+LMG2L["ScreenGui_1"]["AutoLocalize"] = false;
+LMG2L["ScreenGui_1"]["Name"] = [[discord.com/invite/Gnabm6WfhA]];
+LMG2L["Frame_2"] = Instance.new("Frame", LMG2L["ScreenGui_1"]);
+LMG2L["Frame_2"]["BorderSizePixel"] = 0;
+LMG2L["Frame_2"]["BackgroundColor3"] = Color3.fromRGB(56, 56, 56);
+LMG2L["Frame_2"]["Size"] = UDim2.new(0, 0, 0, 32);
+LMG2L["Frame_2"]["Position"] = UDim2.new(0, 18, 0, -56);
+LMG2L["UIDragDetector_a"] = Instance.new("UIDragDetector", LMG2L["Frame_2"]);
+LMG2L["UIDragDetector_a"]["DragUDim2"] = UDim2.new(0, 32, 0, 479);
+LMG2L["TextButton2_3"] = Instance.new("TextButton", LMG2L["Frame_2"]);
+LMG2L["TextButton2_3"]["TextWrapped"] = true;
+LMG2L["TextButton2_3"]["BorderSizePixel"] = 0;
+LMG2L["TextButton2_3"]["TextScaled"] = true;
+LMG2L["TextButton2_3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton2_3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton2_3"]["BackgroundTransparency"] = 9;
+LMG2L["TextButton2_3"]["Size"] = UDim2.new(0, 34, 0, 26);
+LMG2L["TextButton2_3"]["Text"] = [[X]];
+LMG2L["TextButton2_3"]["Name"] = [[TextButton2]];
+LMG2L["TextButton2_3"]["Position"] = UDim2.new(0, 428, 0, 4);
+LMG2L["minize_4"] = Instance.new("Frame", LMG2L["Frame_2"]);
+LMG2L["minize_4"]["BorderSizePixel"] = 0;
+LMG2L["minize_4"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+LMG2L["minize_4"]["Size"] = UDim2.new(0, 462, 0, 0);
+LMG2L["minize_4"]["Position"] = UDim2.new(0, 0, 0, 32);
+LMG2L["minize_4"]["Name"] = [[minize]];
+LMG2L["log_Slog_5"] = Instance.new("Frame", LMG2L["minize_4"]);
+LMG2L["log_Slog_5"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42);
+LMG2L["log_Slog_5"]["Size"] = UDim2.new(0, 454, 0, 298);
+LMG2L["log_Slog_5"]["Position"] = UDim2.new(0, 4, 0, 6);
+LMG2L["log_Slog_5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["log_Slog_5"]["Name"] = [[log_Slog]];
+LMG2L["TextButton2_6"] = Instance.new("TextButton", LMG2L["log_Slog_5"]);
+LMG2L["TextButton2_6"]["TextWrapped"] = true;
+LMG2L["TextButton2_6"]["TextSize"] = 20;
+LMG2L["TextButton2_6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton2_6"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+LMG2L["TextButton2_6"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["TextButton2_6"]["Size"] = UDim2.new(0, 102, 0, 34);
+LMG2L["TextButton2_6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["TextButton2_6"]["Text"] = [[Clear]];
+LMG2L["TextButton2_6"]["Name"] = [[TextButton2]];
+LMG2L["TextButton2_6"]["Position"] = UDim2.new(0, 100, 0, 258);
+LMG2L["TextButton5_7"] = Instance.new("TextButton", LMG2L["log_Slog_5"]);
+LMG2L["TextButton5_7"]["TextWrapped"] = true;
+LMG2L["TextButton5_7"]["TextSize"] = 20;
+LMG2L["TextButton5_7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton5_7"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+LMG2L["TextButton5_7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["TextButton5_7"]["Size"] = UDim2.new(0, 62, 0, 34);
+LMG2L["TextButton5_7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["TextButton5_7"]["Text"] = [[R6]];
+LMG2L["TextButton5_7"]["Name"] = [[TextButton5]];
+LMG2L["TextButton5_7"]["Position"] = UDim2.new(0, 330, 0, 258);
+LMG2L["TextButton4_8"] = Instance.new("TextButton", LMG2L["log_Slog_5"]);
+LMG2L["TextButton4_8"]["TextWrapped"] = true;
+LMG2L["TextButton4_8"]["TextSize"] = 20;
+LMG2L["TextButton4_8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton4_8"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+LMG2L["TextButton4_8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["TextButton4_8"]["Size"] = UDim2.new(0, 56, 0, 34);
+LMG2L["TextButton4_8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["TextButton4_8"]["Text"] = [[RE]];
+LMG2L["TextButton4_8"]["Name"] = [[respawn]];
+LMG2L["TextButton4_8"]["Position"] = UDim2.new(0, 392, 0, 258);
+LMG2L["TextButton3_9"] = Instance.new("TextButton", LMG2L["log_Slog_5"]);
+LMG2L["TextButton3_9"]["TextWrapped"] = true;
+LMG2L["TextButton3_9"]["TextSize"] = 20;
+LMG2L["TextButton3_9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton3_9"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+LMG2L["TextButton3_9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["TextButton3_9"]["Size"] = UDim2.new(0, 96, 0, 34);
+LMG2L["TextButton3_9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["TextButton3_9"]["Text"] = [[Scan]];
+LMG2L["TextButton3_9"]["Name"] = [[Inject]];
+LMG2L["TextButton3_9"]["Position"] = UDim2.new(0, 202, 0, 258);
+LMG2L["TextButton_a"] = Instance.new("TextButton", LMG2L["log_Slog_5"]);
+LMG2L["TextButton_a"]["TextWrapped"] = true;
+LMG2L["TextButton_a"]["TextSize"] = 20;
+LMG2L["TextButton_a"]["Name"] = [[Exe]];
+LMG2L["TextButton_a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton_a"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+LMG2L["TextButton_a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Balthazar.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["TextButton_a"]["Size"] = UDim2.new(0, 96, 0, 34);
+LMG2L["TextButton_a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["TextButton_a"]["Text"] = [[Execute ]];
+LMG2L["TextButton_a"]["Position"] = UDim2.new(0, 4, 0, 258);
+LMG2L["ScrollingFrame_b"] = Instance.new("ScrollingFrame", LMG2L["log_Slog_5"]);
+LMG2L["ScrollingFrame_b"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42);
+LMG2L["ScrollingFrame_b"]["Size"] = UDim2.new(0, 444, 0, 246);
+-- LMG2L["ScrollingFrame_b"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY;
+LMG2L["ScrollingFrame_b"]["Position"] = UDim2.new(0, 4, 0, 4);
+LMG2L["ScrollingFrame_b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["Servertext_c"] = Instance.new("TextBox", LMG2L["ScrollingFrame_b"]);
+LMG2L["Servertext_c"]["Name"] = [[Servertext]];
+LMG2L["Servertext_c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Servertext_c"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Servertext_c"]["BorderSizePixel"] = 0;
+LMG2L["Servertext_c"]["TextSize"] = 15;
+LMG2L["Servertext_c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Servertext_c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+LMG2L["Servertext_c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Servertext_c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Servertext_c"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+LMG2L["Servertext_c"]["MultiLine"] = true;
+LMG2L["Servertext_c"]["ClearTextOnFocus"] = false;
+LMG2L["Servertext_c"]["Size"] = UDim2.new(0, 448, 0, 290);
+LMG2L["Servertext_c"]["Text"] = [[-- https://discord.com/invite/Gnabm6WfhA]];
+LMG2L["Servertext_c"]["BackgroundTransparency"] = 1;
+LMG2L["TextLabel2_d"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
+LMG2L["TextLabel2_d"]["TextWrapped"] = true;
+LMG2L["TextLabel2_d"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel2_d"]["TextSize"] = 33;
+LMG2L["TextLabel2_d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["TextLabel2_d"]["TextStrokeColor3"] = Color3.fromRGB(181, 3, 255);
+LMG2L["TextLabel2_d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextLabel2_d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+LMG2L["TextLabel2_d"]["TextColor3"] = Color3.fromRGB(98, 10, 255);
+LMG2L["TextLabel2_d"]["BackgroundTransparency"] = 8;
+LMG2L["TextLabel2_d"]["Size"] = UDim2.new(0, 170, 0, 28);
+LMG2L["TextLabel2_d"]["Text"] = [[Backdoor]];
+LMG2L["TextLabel2_d"]["Name"] = [[TextLabel2]];
+LMG2L["TextLabel2_d"]["Position"] = UDim2.new(0, 77, 0, 2);
+LMG2L["TextLabel_e"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
+LMG2L["TextLabel_e"]["TextWrapped"] = true;
+LMG2L["TextLabel_e"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel_e"]["TextSize"] = 32;
+LMG2L["TextLabel_e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["TextLabel_e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextLabel_e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+LMG2L["TextLabel_e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextLabel_e"]["BackgroundTransparency"] = 8;
+LMG2L["TextLabel_e"]["Size"] = UDim2.new(0, 214, 0, 28);
+LMG2L["TextLabel_e"]["Text"] = [[Yoliz  -]];
+LMG2L["TextLabel_e"]["Position"] = UDim2.new(0, 4, 0, 2);
+LMG2L["TextButton_f"] = Instance.new("TextButton", LMG2L["Frame_2"]);
+LMG2L["TextButton_f"]["TextWrapped"] = true;
+LMG2L["TextButton_f"]["BorderSizePixel"] = 0;
+LMG2L["TextButton_f"]["TextScaled"] = true;
+LMG2L["TextButton_f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton_f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton_f"]["BackgroundTransparency"] = 9;
+LMG2L["TextButton_f"]["Size"] = UDim2.new(0, 34, 0, 28);
+LMG2L["TextButton_f"]["Text"] = [[_]];
+LMG2L["TextButton_f"]["Position"] = UDim2.new(0, 400, 0, 0);
+LMG2L["log_Slog_5"]["Visible"] = false;
+LMG2L["TextLabel2_d"]["Visible"] = false;
+LMG2L["TextLabel_e"]["Visible"] = false;
+LMG2L["TextButton_f"]["Visible"] = false;
+LMG2L["TextButton2_3"]["Visible"] = false;
