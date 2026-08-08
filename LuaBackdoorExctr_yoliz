@@ -197,3 +197,109 @@ LMG2L["TextLabel2_d"]["Visible"] = false;
 LMG2L["TextLabel_e"]["Visible"] = false;
 LMG2L["TextButton_f"]["Visible"] = false;
 LMG2L["TextButton2_3"]["Visible"] = false;
+
+
+wait(0.4)
+local tweenInfo = TweenInfo.new(
+	0.5, 
+	Enum.EasingStyle.Quad,
+	Enum.EasingDirection.Out
+)
+
+	local tween = TweenService:Create(LMG2L["Frame_2"], tweenInfo, {
+		Size = UDim2.new(0, 462, 0, 32)
+	})
+	tween:Play()
+	tween.Completed:Wait() 
+wait(0.5)
+LMG2L["TextLabel2_d"]["Visible"] = true
+LMG2L["TextLabel_e"]["Visible"] = true
+LMG2L["TextButton_f"]["Visible"] = true
+LMG2L["TextButton2_3"]["Visible"] = true
+wait(0.1)
+local tweenInfo = TweenInfo.new(
+	0.6, 
+	Enum.EasingStyle.Quad,
+	Enum.EasingDirection.Out
+)
+
+if not LMG2L["log_Slog_5"].Visible then
+	local tween = TweenService:Create(LMG2L["minize_4"], tweenInfo, {
+		Size = UDim2.new(0, 462, 0, 308)
+	})
+	tween:Play()
+	tween.Completed:Wait() 
+wait(0.1)
+LMG2L["log_Slog_5"].Visible = true
+end
+
+LMG2L["TextButton_f"].MouseButton1Click:Connect(function()
+local tweenInfo = TweenInfo.new(
+	0.6, 
+	Enum.EasingStyle.Quad,
+	Enum.EasingDirection.Out
+)
+
+if LMG2L["log_Slog_5"].Visible then
+LMG2L["log_Slog_5"].Visible = false
+	local tween = TweenService:Create(LMG2L["minize_4"], tweenInfo, {
+		Size = UDim2.new(0, 462, 0, 0)
+	})
+	tween:Play()
+	tween.Completed:Wait() 
+else
+	local tween = TweenService:Create(LMG2L["minize_4"], tweenInfo, {
+		Size = UDim2.new(0, 462, 0, 308)
+	})
+	tween:Play()
+ wait(0.5)
+	LMG2L["log_Slog_5"].Visible = true
+end
+end)
+
+LMG2L["TextButton2_6"].MouseButton1Click:Connect(function()
+LMG2L["Servertext_c"]["Text"] = [[]]
+end)
+
+
+LMG2L["TextButton2_3"].MouseButton1Click:Connect(function()
+
+local frame = LMG2L["minize_4"]
+local log = LMG2L["log_Slog_5"]
+
+local tweenInfo = TweenInfo.new(
+	0.6, 
+	Enum.EasingStyle.Quad,
+	Enum.EasingDirection.Out
+)
+
+if log.Visible then
+log.Visible = false
+	local tween = TweenService:Create(frame, tweenInfo, {
+		Size = UDim2.new(0, 462, 0, 0)
+	})
+	tween:Play()
+	tween.Completed:Wait() 
+end
+wait(0.4)
+LMG2L["TextButton2_3"]:Destroy()
+LMG2L["TextLabel2_d"]:Destroy()
+LMG2L["TextLabel_e"]:Destroy()
+LMG2L["TextButton_f"]:Destroy()
+wait(0.2)
+local frame = LMG2L["Frame_2"]
+local tweenInfo = TweenInfo.new(
+	0.5, 
+	Enum.EasingStyle.Quad,
+	Enum.EasingDirection.Out
+)
+
+	local tween = TweenService:Create(frame, tweenInfo, {
+		Size = UDim2.new(0, 0, 0, 32)
+	})
+	tween:Play()
+	tween.Completed:Wait() 
+wait(0.7)
+LMG2L["ScreenGui_1"]:Destroy()
+LMG2L["ScreenGui_1"]:Remove()
+end)
